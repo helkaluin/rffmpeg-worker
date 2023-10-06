@@ -12,6 +12,7 @@ RUN \
     && \
     apt-get -qq install -y \
         gnupg2 \
+        curl \
     && \
     case "${TARGETPLATFORM}" in \
         'linux/amd64') \
