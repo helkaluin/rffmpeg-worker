@@ -45,9 +45,8 @@ RUN \
         jellyfin-ffmpeg5 \
         openssh-server \
         augeas-tools \
-        libvshadow-utils \
     && \
-    apt-get remove -y gnupg2 \
+    apt-get remove -y gnupg2 curl \
     && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
     && apt-get autoremove -y \
     && apt-get clean \
