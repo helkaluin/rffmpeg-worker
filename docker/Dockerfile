@@ -69,4 +69,4 @@ COPY ./docker/entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["/usr/sbin/sshd", "-D", "-e", "-f", "/etc/ssh/sshd_config"]
 
-LABEL org.opencontainers.image.source="https://github.com/aleksasiriski/rffmpeg-worker"
+LABEL org.opencontainers.image.source="https://github.com/helkaluin/rffmpeg-worker"
