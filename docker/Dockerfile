@@ -10,7 +10,7 @@ ENV NVIDIA_DRIVER_CAPABILITIES="compute,video,utility"
 RUN \
     apt-get -qq update \
     && \
-    apt-get -qq install -y --no-install-recommends \
+    apt-get -qq install -y \
         gnupg2 \
         curl \
     && \
@@ -34,14 +34,14 @@ RUN \
     && \
     apt-get -qq update \
     && \
-    apt-get -qq install -y --no-install-recommends \
+    apt-get -qq install -y \
         ca-certificates \
         ${EXTRA_INSTALL_ARG} \
     && \
     curl -fsSL "https://repo.jellyfin.org/ubuntu/jellyfin_team.gpg.key" | apt-key add - && \
     echo "deb [arch=${ARCH}] https://repo.jellyfin.org/ubuntu jammy main" | tee /etc/apt/sources.list.d/jellyfin.list && \
     apt-get -qq update && \
-    apt-get -qq install -y --no-install-recommends \
+    apt-get -qq install -y \
         jellyfin-ffmpeg5 \
         openssh-server \
         augeas-tools \
